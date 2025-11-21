@@ -21,7 +21,7 @@ This project serves as a learning resource for setting up Dokploy as a centraliz
 .
 ├── README.md                          # This file - Project overview
 ├── install_dokploy.sh                 # Automated installation script
-├── .project/
+├── docs/
 │   └── dashboard/
 │       └── DOKPLOY_GUIDE_101.md      # Comprehensive beginner's guide
 ├── .gitignore                         # Git ignore rules
@@ -90,7 +90,7 @@ This approach allows you to:
 
 Start with the included comprehensive beginner's guide:
 
-**[→ Read: DOKPLOY_GUIDE_101.md](./project/dashboard/DOKPLOY_GUIDE_101.md)**
+**[→ Read: DOKPLOY_GUIDE_101.md](./docs/dashboard/DOKPLOY_GUIDE_101.md)**
 
 This guide covers:
 
@@ -407,7 +407,7 @@ docker service logs dokploy-postgres -f
 docker volume inspect dokploy-postgres-database
 ```
 
-For more detailed troubleshooting, see [DOKPLOY_GUIDE_101.md](./project/dashboard/DOKPLOY_GUIDE_101.md#solving-problems).
+For more detailed troubleshooting, see [DOKPLOY_GUIDE_101.md](./docs/dashboard/DOKPLOY_GUIDE_101.md#solving-problems).
 
 ## 📞 Support
 
@@ -430,7 +430,7 @@ For more detailed troubleshooting, see [DOKPLOY_GUIDE_101.md](./project/dashboar
 
 ## 📚 Learning Path
 
-**Beginner** → Start with the [installation script](./install_dokploy.sh) and [DOKPLOY_GUIDE_101.md](./project/dashboard/DOKPLOY_GUIDE_101.md)
+**Beginner** → Start with the [installation script](./install_dokploy.sh) and [DOKPLOY_GUIDE_101.md](./docs/dashboard/DOKPLOY_GUIDE_101.md)
 
 **Intermediate** → Explore [manual installation](https://docs.dokploy.com/docs/core/manual-installation), create projects, deploy applications
 
@@ -443,4 +443,3 @@ For more detailed troubleshooting, see [DOKPLOY_GUIDE_101.md](./project/dashboar
 **Version**: 1.0.0
 
 **Status**: Educational Project - Production Ready
-
