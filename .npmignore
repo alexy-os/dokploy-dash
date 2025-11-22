@@ -1,0 +1,29 @@
+# Source files
+src/
+scripts/
+tests/
+
+# Config files
+tsconfig.json
+.eslintrc.js
+.prettierrc
+vitest.config.ts
+
+# Documentation
+*.md
+!README.md
+
+# Environment
+.env*
+
+# Development
+.vscode/
+.idea/
+
+# Temporary
+temp-dokploy/
+openapi.json
+settings.getOpenApiDocument
+Api.ts
+cluster.md
+

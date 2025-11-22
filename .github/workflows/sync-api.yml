@@ -1,0 +1,69 @@
+name: Sync Dokploy API
+
+on:
+  schedule:
+    # Run daily at 2 AM UTC
+    - cron: '0 2 * * *'
+  workflow_dispatch:
+  push:
+    branches:
+      - main
+    paths:
+      - 'scripts/generate-sdk.ts'
+
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+    
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+          cache: 'npm'
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Fetch latest OpenAPI spec
+        run: |
+          curl -o openapi.json https://dash.dokploy.com/api/settings.getOpenApiDocument
+          
+      - name: Generate TypeScript types
+        run: npm run sync:types
+
+      - name: Generate SDK classes
+        run: npm run generate
+
+      - name: Build SDK
+        run: npm run build
+
+      - name: Check for changes
+        id: changes
+        run: |
+          git diff --exit-code || echo "changed=true" >> $GITHUB_OUTPUT
+
+      - name: Create Pull Request
+        if: steps.changes.outputs.changed == 'true'
+        uses: peter-evans/create-pull-request@v5
+        with:
+          commit-message: 'chore: sync SDK with latest Dokploy API'
+          title: '🔄 Dokploy API Update'
+          body: |
+            ## Automated API Sync
+            
+            This PR updates the SDK to match the latest Dokploy API specification.
+            
+            ### Changes
+            - Updated OpenAPI types
+            - Regenerated SDK classes
+            - Updated build artifacts
+            
+            Please review the changes and merge if everything looks good.
+          branch: sync-dokploy-api
+          labels: automated, api-sync
+          delete-branch: true
+
