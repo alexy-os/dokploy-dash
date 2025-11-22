@@ -5,25 +5,26 @@ tests/
 
 # Config files
 tsconfig.json
-.eslintrc.js
-.prettierrc
 vitest.config.ts
+.eslintrc.js
+.editorconfig
 
-# Documentation
-*.md
-!README.md
+# Examples and docs
+examples/
+docs/
 
-# Environment
-.env*
+# Git
+.git/
+.gitignore
 
-# Development
+# IDE
 .vscode/
 .idea/
+.cursor/
 
-# Temporary
-temp-dokploy/
+# Other
+*.log
+.env*
 openapi.json
-settings.getOpenApiDocument
-Api.ts
-cluster.md
-
+openapi.formatted.json
+node_modules/

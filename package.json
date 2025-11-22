@@ -6,7 +6,9 @@
   "types": "dist/index.d.ts",
   "type": "module",
   "scripts": {
-    "generate": "tsx scripts/generate-sdk.ts",
+    "generate:types": "openapi-typescript openapi.json -o src/types/dokploy.d.ts",
+    "generate:sdk": "tsx scripts/generate-sdk.ts",
+    "generate": "npm run generate:types && npm run generate:sdk",
     "build": "tsc",
     "test": "vitest",
     "lint": "eslint src --ext .ts",
@@ -24,9 +26,9 @@
   },
   "devDependencies": {
     "@types/node": "^22.10.2",
-    "@typescript-eslint/eslint-plugin": "^8.18.2",
-    "@typescript-eslint/parser": "^8.18.2",
-    "eslint": "^9.17.0",
+    "@typescript-eslint/eslint-plugin": "^7.18.0",
+    "@typescript-eslint/parser": "^7.18.0",
+    "eslint": "^8.57.0",
     "openapi-typescript": "^7.4.3",
     "tsx": "^4.19.2",
     "typescript": "^5.7.2",
