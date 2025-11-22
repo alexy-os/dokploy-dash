@@ -22,6 +22,11 @@ docs/
 .idea/
 .cursor/
 
+# Root README (use dist/README.md instead)
+/README.md
+CHANGELOG.md
+CONTRIBUTING.md
+
 # Other
 *.log
 .env*

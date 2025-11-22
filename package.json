@@ -9,7 +9,8 @@
     "generate:types": "openapi-typescript openapi.json -o src/types/dokploy.d.ts",
     "generate:sdk": "tsx scripts/generate-sdk.ts",
     "generate": "npm run generate:types && npm run generate:sdk",
-    "build": "tsc",
+    "build": "tsc && npm run copy:files",
+    "copy:files": "node -e \"const fs=require('fs'); fs.copyFileSync('src/README.md','dist/README.md'); fs.copyFileSync('LICENSE','dist/LICENSE'); fs.copyFileSync('package.json','dist/package.json')\"",
     "test": "vitest",
     "lint": "eslint src --ext .ts",
     "prepare": "npm run build"
