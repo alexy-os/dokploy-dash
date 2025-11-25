@@ -1,0 +1,1 @@
+{"version":3,"file":"Stripe.d.ts","sourceRoot":"","sources":["../../src/resources/Stripe.ts"],"names":[],"mappings":"AAIA;;;GAGG;AACH,qBAAa,MAAM;IACjB,OAAO,CAAC,MAAM,CAAyC;gBAE3C,OAAO,EAAE,MAAM,EAAE,QAAQ,EAAE,MAAM;IAS7C;;;OAGG;IACG,WAAW;IAcjB;;;OAGG;IACG,qBAAqB,CAAC,IAAI,EAAE,GAAG;IAgBrC;;;OAGG;IACG,2BAA2B;IAcjC;;;OAGG;IACG,oBAAoB;CAa3B"}

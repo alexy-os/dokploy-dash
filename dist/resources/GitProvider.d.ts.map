@@ -1,0 +1,1 @@
+{"version":3,"file":"GitProvider.d.ts","sourceRoot":"","sources":["../../src/resources/GitProvider.ts"],"names":[],"mappings":"AAIA;;;GAGG;AACH,qBAAa,WAAW;IACtB,OAAO,CAAC,MAAM,CAAyC;gBAE3C,OAAO,EAAE,MAAM,EAAE,QAAQ,EAAE,MAAM;IAS7C;;;OAGG;IACG,MAAM;IAcZ;;;OAGG;IACG,MAAM,CAAC,IAAI,EAAE,GAAG;CAevB"}
