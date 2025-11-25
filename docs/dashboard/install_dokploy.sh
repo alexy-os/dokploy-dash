@@ -140,7 +140,6 @@ install_dokploy() {
       -e ADVERTISE_ADDR=$advertise_addr \
       dokploy/dokploy:latest
  
- 
     docker run -d \
         --name dokploy-traefik \
         --restart always \
@@ -153,7 +152,6 @@ install_dokploy() {
         traefik:v3.6.1
  
     docker network connect dokploy-network dokploy-traefik
- 
  
     # Optional: Use docker service create instead of docker run
     #   docker service create \
